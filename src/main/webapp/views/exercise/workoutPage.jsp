@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <%@ include file="views/common/menubar_odg.jsp" %>
+    <%@ include file="/views/common/menubar.jsp" %>
         <div id="content-container" style="margin: 0 auto;">
             <div class="left-container">
                 <!-- 내용이 안들어있을 때 -->
