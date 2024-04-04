@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+.content-container{
+  width: 100%;
+  height: 1000px;
+  padding: 0px 50px;
+  display:flex;
+  justify-content: space-between;
+}
+
+.left-container {
+  width: 700px;
+  min-width: 500px;
+  padding: 50px;
+}
+
+.right-container {
+  width: 1000px;
+  min-width: 1000px;
+  height: 800px;
+  padding: 50px;
+}
+
+.mg-top20 {
+  margin-top: 20px;
+}
+
+
+td {
+  font-size: 20px;
+
+}
+
+.addWorkout {
+  margin-bottom: 50px;
+}
+
+.addWorkout:hover {
+  background-color : rgb(184, 181, 181);
+  cursor: pointer;
+}

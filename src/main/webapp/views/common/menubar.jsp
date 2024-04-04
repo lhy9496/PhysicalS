@@ -5,8 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../resources/css/menubar.css">
-
+<link rel="stylesheet" href="../../resources/css/menubar.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -15,12 +14,13 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
     <div id="header">
         <div id="logo-search-container">
             <div id="logo-container">
                 <a href="#">
-                <img src="../resources/logo/sample.jpg" alt="로고" style="width: 100%; height: 100%;">
+                <img src="../../resources/logo/sample.jpg" alt="로고" style="width: 100%; height: 100%;">
                 </a>
             </div>
 
