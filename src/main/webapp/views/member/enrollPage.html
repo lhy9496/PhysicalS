@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -234,13 +232,12 @@
             }
         }
 
-        // 이메일 중복 확인 ajax
+        // 이메일 중복 확인 스크립트
         const checkId = document.querySelector("#checkId");
         const resetId = document.querySelector("#resetId");
         const emailInput = document.querySelector("#email");
         checkId.onclick = function(){
-
-
+            //ajax용 코드
             $.ajax({
                 type : "GET",
                 url : "idCheck.me",
@@ -258,6 +255,11 @@
                     emailInput.value = ""
                 }
             })
+            // 기능 확인용 코드
+            // emailInput.readOnly = true;
+            // checkId.style.display = "none";
+            // resetId.style.display = "block";
+
         }
         resetId.onclick = function(){
             emailInput.readOnly = false;
