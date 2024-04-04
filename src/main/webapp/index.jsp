@@ -86,9 +86,8 @@
         position: absolute;
         right: 15px;
         top: 15px;
-
     }
-</style>
+  </style>
 </head>
 <body>
     <div class="account-space">
