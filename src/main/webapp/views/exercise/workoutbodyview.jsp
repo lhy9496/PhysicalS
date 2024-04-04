@@ -98,6 +98,58 @@ tr, td {
                     </tbody>
                 </table>
             </table>
+
+            <table class="table table-bordered table-striped" style="border-collapse: separate; border-radius: 20px;">
+                <thead>
+                    <tr class="table-success">
+                        <td colspan="3">벤치프레스</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>세트</td>
+                        <td>중량</td>
+                        <td>횟수</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>50</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>60</td>
+                        <td>10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </table>
+
+        <table class="table table-bordered table-striped" style="border-collapse: separate; border-radius: 20px;">
+            <thead>
+                <tr class="table-success">
+                    <td colspan="3">벤치프레스</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>세트</td>
+                    <td>중량</td>
+                    <td>횟수</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>50</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>60</td>
+                    <td>10</td>
+                </tr>
+            </tbody>
+        </table>
+    </table>
         </div>
 
         <div class="right-container">
