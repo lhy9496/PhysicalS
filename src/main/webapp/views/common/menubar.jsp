@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="../../resources/css/menubar.css">
+<title>PhysicalS</title>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -13,37 +13,42 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <!-- Latest compiled JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-</head>
 
+<link rel="stylesheet" href="../../resources/css/menubar.css">
+
+</head>
 <body>
-    <div id="header">
+    <div id="header" class="main-bgcolor">
         <div id="logo-search-container">
-            <div id="logo-container">
+            <div id="logo-container" style="margin: auto;">
                 <a href="#">
-                <img src="../../resources/logo/sample.jpg" alt="로고" style="width: 100%; height: 100%;">
+                <img src="../../resources/logo/psslogomenubar.png" alt="로고" >
                 </a>
             </div>
 
             <div id="searchbar-container">
+              <form action="" method="GET">
                 <div id="searchbar">
                     <input type="text" name="searchUser" placeholder="닉네임을 입력하세요.">
                     <button type="submit">검색</button>
                 </div>
+              </form>
             </div>
         </div>
+        
         <div id="nav">
             <ul class="nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">마이페이지</a>
+                  <a class="nav-link  text-white" href="#">마이페이지</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">운동기록</a>
+                  <a class="nav-link  text-white" href="../exercise/workoutbodyview.jsp">운동기록</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">식단기록</a>
+                  <a class="nav-link  text-white" href="#">식단기록</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">커뮤니티</a>
+                  <a class="nav-link  text-white" href="#">커뮤니티</a>
                 </li>
               </ul>
         </div>

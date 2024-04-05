@@ -2,10 +2,12 @@
   box-sizing: border-box;
 }
 
+
+
 #header {
   width: 100%;
   height: 250px;
-  background-color: aquamarine;
+  background-color: rgb(224,015,026);
   display: flex;
   flex-direction: column;
 }
@@ -17,13 +19,13 @@
 }  
 
 #logo-container {
-  width: 440px;
+  width: 300px;
   min-width: 300px;
 }
 
 #searchbar-container {
   width: 1200px;
-  min-width: 500px;
+  min-width: 1000px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +45,7 @@
   align-items: center;
 }
 
-#searchbar input {
+#searchbar input[name="searchUser"] {
   width: 80%;
   height: 95%;
   border-color: none;
@@ -86,3 +88,4 @@
   white-space: nowrap;
   color: black;
 }
+
