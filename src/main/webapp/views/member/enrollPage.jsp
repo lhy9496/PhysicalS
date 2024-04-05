@@ -130,7 +130,7 @@
                 <div class="input-space">
                     <input type="password" name="userPwd" id="pwd" class="input-space" placeholder="비밀번호" required>
                 </div>
-                <div style="margin: auto;" id="pwdMsg"></div>
+                <div style="margin: auto; font-size: 13px;" id="pwdMsg"></div>
             </div>
             <div class="bottom-line">
                 <div class="icon-space">
@@ -139,7 +139,7 @@
                 <div class="input-space">
                     <input type="password" name="userPwdCheck" id="pwdChk" class="input-space" placeholder="비밀번호 확인" onkeyup="pwdCheck(pwdResult)" required>
                 </div>
-                <div style="margin: auto;" id="pwdResult"></div>
+                <div style="margin: auto; font-size: 13px;" id="pwdResult"></div>
             </div>
 
             
@@ -238,32 +238,38 @@
         const checkId = document.querySelector("#checkId");
         const resetId = document.querySelector("#resetId");
         const emailInput = document.querySelector("#email");
+        const enroll_button = document.querySelector("#enroll-button");
+
         checkId.onclick = function(){
 
+            if(emailInput.value != null){
 
-            $.ajax({
-                type : "GET",
-                url : "idCheck.me",
-                data: {
-                    checkId : emailInput.value
-                },
-                success: function(){
-                    // 사용가능한 이메일입니다.
-                    emailInput.readOnly = true;
-                    checkId.style.display = "none";
-                    resetId.style.display = "block";
-                },
-                error: function(){
-                    // 이미 존재하는 아이디입니다.
-                    emailInput.value = ""
-                }
-            })
+                $.ajax({
+                    type : "GET",
+                    url : "idCheck.me",
+                    data: {
+                        checkId : emailInput.value
+                    },
+                    success: function(){
+                        // 사용가능한 이메일입니다.
+                        emailInput.readOnly = true;
+                        checkId.style.display = "none";
+                        resetId.style.display = "block";
+                        enroll_button.disabled = false;
+                    },
+                    error: function(){
+                        // 이미 존재하는 아이디입니다.
+                        emailInput.value = ""
+                    }
+                })
+            }
         }
         resetId.onclick = function(){
             emailInput.readOnly = false;
             emailInput.value = ""
             resetId.style.display = "none";
             checkId.style.display = "block";
+            enroll_button.disabled = true;
         }
     </script>
 </body>
