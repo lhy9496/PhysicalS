@@ -82,7 +82,7 @@
         margin-left: auto;
         margin-right: auto;
     }
-    .subit-button{
+    #enroll-button{
         width: 450px;
         height: 64px;
         border-radius: 10px;
@@ -106,7 +106,7 @@
         <div class="signup-frame">
             <!-- 로고 -->
             <div class="logo-space">
-                <a href="<%=contextPath %>"><img src="../../resources/logo/psslogoenroll.png"  alt="로고 이미지"></a>
+                <a href="../common/mainmenu.html"><img src="../../resources/logo/psslogoenroll.png"  alt="로고 이미지"></a>
             </div>
             <!-- 상단 입력칸 3개 -->
             <div class="top-line">
@@ -128,7 +128,7 @@
                 <div class="input-space">
                     <input type="password" name="userPwd" id="pwd" class="input-space" placeholder="비밀번호" required>
                 </div>
-                <div style="margin: auto;" id="pwdMsg"></div>
+                <div style="margin: auto; font-size: 13px;" id="pwdMsg"></div>
             </div>
             <div class="bottom-line">
                 <div class="icon-space">
@@ -137,7 +137,7 @@
                 <div class="input-space">
                     <input type="password" name="userPwdCheck" id="pwdChk" class="input-space" placeholder="비밀번호 확인" onkeyup="pwdCheck(pwdResult)" required>
                 </div>
-                <div style="margin: auto;" id="pwdResult"></div>
+                <div style="margin: auto; font-size: 13px;" id="pwdResult"></div>
             </div>
 
             
@@ -163,7 +163,7 @@
                     <img src="../../resources/icon/calendar_icon.png" alt="달력 이미지">
                 </div>
                 <div class="input-space">
-                    <input type="text" class="input-space" name="userAge" placeholder="나이" maxlength="3">
+                    <input type="text" class="input-space" name="userAge" placeholder="나이" maxlength="3" required>
                 </div>
             </div>
             <div class="gender-line">
@@ -181,7 +181,7 @@
 
             <!-- 가입신청 -->
             <div class="subit-space">
-                <button type="submit" class="subit-button"><b>가입신청</b></button>
+                <button type="submit" id="enroll-button" disabled><b>가입신청</b></button>
             </div>
         </div>
     </form>
@@ -204,6 +204,8 @@
         const pwdChk = document.getElementById("pwdChk");
         const pwdResult = document.getElementById("pwdResult");
         
+
+
         const pwdNotice = function() {
             pwdChk.value = "";
             pwdResult.innerHTML = "";
@@ -236,36 +238,50 @@
         const checkId = document.querySelector("#checkId");
         const resetId = document.querySelector("#resetId");
         const emailInput = document.querySelector("#email");
-        checkId.onclick = function(){
-            //ajax용 코드
-            $.ajax({
-                type : "GET",
-                url : "idCheck.me",
-                data: {
-                    checkId : emailInput.value
-                },
-                success: function(){
-                    // 사용가능한 이메일입니다.
-                    emailInput.readOnly = true;
-                    checkId.style.display = "none";
-                    resetId.style.display = "block";
-                },
-                error: function(){
-                    // 이미 존재하는 아이디입니다.
-                    emailInput.value = ""
-                }
-            })
-            // 기능 확인용 코드
-            // emailInput.readOnly = true;
-            // checkId.style.display = "none";
-            // resetId.style.display = "block";
+        const enroll_button = document.querySelector("#enroll-button");
+        
 
+        function isValidEmail(email) {
+        // 이메일 주소 유효성을 검사하는 정규식
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return emailRegex.test(email);
+        }
+
+        checkId.onclick = function(){
+            let email = emailInput.value;
+            if(isValidEmail(email)){
+                //ajax용 코드
+                // $.ajax({
+                //     type : "GET",
+                //     url : "idCheck.me",
+                //     data: {
+                //         checkId : emailInput.value
+                //     },
+                //     success: function(){
+                //         // 사용가능한 이메일입니다.
+                //         emailInput.readOnly = true;
+                //         checkId.style.display = "none";
+                //         resetId.style.display = "block";
+                //         enroll_button.disabled = false;
+                //     },
+                //     error: function(){
+                //         // 이미 존재하는 아이디입니다.
+                //         emailInput.value = ""
+                //     }
+                // })
+                // 기능 확인용 코드
+                emailInput.readOnly = true;
+                checkId.style.display = "none";
+                resetId.style.display = "block";
+                enroll_button.disabled = false;
+            }
         }
         resetId.onclick = function(){
             emailInput.readOnly = false;
-            emailInput.value = ""
+            emailInput.value = "";
             resetId.style.display = "none";
             checkId.style.display = "block";
+            enroll_button.disabled = true;
         }
     </script>
 </body>
