@@ -101,7 +101,7 @@
     <form action="<%=contextPath%>/search.me">
         <div class="index-frame">
             <div class="logo-space">
-                <a href="<%=contextPath %>"><img src="views/resources/logo/psslogoindex.png" alt="로고 이미지"></a>
+                <a href="<%=contextPath %>"><img src="/resources/logo/psslogoindex.png" alt="로고 이미지"></a>
             </div>
             <div class="search-space">
                 <input type="text" class="search-input" placeholder="유저 닉네임">

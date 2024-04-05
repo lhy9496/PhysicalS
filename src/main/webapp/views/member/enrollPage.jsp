@@ -108,7 +108,7 @@
         <div class="signup-frame">
             <!-- 로고 -->
             <div class="logo-space">
-                <a href="<%=contextPath %>"><img src="../resources/logo/psslogoenroll.png"  alt="로고 이미지"></a>
+                <a href="<%=contextPath %>"><img src="../../resources/logo/psslogoenroll.png"  alt="로고 이미지"></a>
             </div>
             <!-- 상단 입력칸 3개 -->
             <div class="top-line">
@@ -125,7 +125,7 @@
             </div>
             <div class="middle-line">
                 <div class="icon-space">
-                    <img src="../resources/icon/pwd_icon.png" alt="비번 이미지">
+                    <img src="../../resources/icon/person_icon.png" alt="비번 이미지">
                 </div>
                 <div class="input-space">
                     <input type="password" name="userPwd" id="pwd" class="input-space" placeholder="비밀번호" required>
@@ -134,7 +134,7 @@
             </div>
             <div class="bottom-line">
                 <div class="icon-space">
-                    <img src="../resources/icon/pwd_icon.png" alt="비번 이미지">
+                    <img src="../../resources/icon/pwd_icon.png" alt="비번 이미지">
                 </div>
                 <div class="input-space">
                     <input type="password" name="userPwdCheck" id="pwdChk" class="input-space" placeholder="비밀번호 확인" onkeyup="pwdCheck(pwdResult)" required>
@@ -146,7 +146,7 @@
             <!-- 하단 입력칸 4개 -->
             <div class="top-line">
                 <div class="icon-space">
-                    <img src="../resources/icon/person_icon.png" alt="인물 이미지">
+                    <img src="../../resources/icon/person_icon.png" alt="인물 이미지">
                 </div>
                 <div class="input-space">
                     <input type="text" class="input-space" name="userName" placeholder="이름" required>
@@ -154,7 +154,7 @@
             </div>
             <div class="middle-line1">
                 <div class="icon-space">
-                    <img src="../resources/icon/person_icon.png" alt="인물 이미지">
+                    <img src="../../resources/icon/person_icon.png" alt="인물 이미지">
                 </div>
                 <div class="input-space">
                     <input type="text" class="input-space" name="userNickname" placeholder="닉네임" required>
@@ -162,7 +162,7 @@
             </div>
             <div class="middle-line2">
                 <div class="icon-space">
-                    <img src="../resources/icon/calendar_icon.png" alt="달력 이미지">
+                    <img src="../../resources/icon/calendar_icon.png" alt="달력 이미지">
                 </div>
                 <div class="input-space">
                     <input type="text" class="input-space" name="userAge" placeholder="나이" maxlength="3">
