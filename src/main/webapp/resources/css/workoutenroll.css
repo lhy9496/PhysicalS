@@ -2,40 +2,90 @@
   box-sizing: border-box;
 }
 
-.enroll-container{
+
+.workoutenroll-area {
+  width: 70%;
+  /* height: 900px; */
+  margin: 0 auto;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#workout-list-area {
   width: 100%;
-  height: 1000px;
-  padding: 0px 50px;
-  border: 1px solid black;
+  height: 400px;
+  overflow: scroll;
+  margin: 50px;
+}
+
+.workout-list-item {
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  background: #d9d9d9;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.w_name {
+  width: 60%;
+}
+
+.w_body, .w_checkbox {
+  width: 15%;
+}
+
+.workout-list-item>div {
+  font-size: 25px;
+}
+
+.w_checkbox {
   display: flex;
   justify-content: center;
 }
 
-.workout-container {
-  width: 1200px;
-  height: 800px;
-}
-
-table{
-  width: 900px;
-  margin: 0 auto;
-}
-
-.chooseTd:hover {
-  background-color: yellow;
-  cursor: pointer;
-}
-
-.setCount {
-  width: 300px;
-}
-
-.countSet {
-  width: 100%;
-  text-align: right;
+#enroll-btn {
+  padding: 10px 50px;
+  font-size: 30px;
+  border-radius: 10px;
+  background-color: rgb(224, 015, 026);
+  color: white;
   border-style: none;
+
 }
 
-table {
-  font-size: 25px;
+#checked_workout {
+  width: 100%;
+  /* border: 2px solid black; */
 }
+
+.check_workout_list {
+  width: 100%;
+  font-size: 25px;
+  border-bottom: 1px solid grey;
+  border-collapse: separate;
+  border-spacing: 20px;
+}
+
+.td-50 {
+  width: 50%;
+}
+
+.td-25 {
+  width:25%;
+}
+
+.txt-center{
+  text-align: center;
+}
+
+.bottom-border {
+  border-width: 0 0 1px;
+}
+
