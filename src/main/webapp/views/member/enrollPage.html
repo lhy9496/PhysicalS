@@ -71,6 +71,10 @@
         background: rgba(255, 255, 255);
         font-size: 16px;
         font-weight: 600;
+        cursor: pointer;
+    }
+    .gender-button:hover{
+        border: 2px solid rgb(224, 15, 26);
     }
     .btn{
         display: none;
@@ -274,6 +278,7 @@
                 checkId.style.display = "none";
                 resetId.style.display = "block";
                 enroll_button.disabled = false;
+                enroll_button.style.cursor = "pointer"
             }
         }
         resetId.onclick = function(){
