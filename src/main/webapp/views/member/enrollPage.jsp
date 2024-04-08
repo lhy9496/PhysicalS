@@ -74,6 +74,9 @@
         font-size: 16px;
         font-weight: 600;
     }
+    .gender-button:hover{
+        border: 2px solid rgb(224, 15, 26);
+    }
     .btn{
         display: none;
     }
