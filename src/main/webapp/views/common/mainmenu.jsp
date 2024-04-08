@@ -84,13 +84,13 @@
     <body>
         <div class="account-space">
             <!-- 로그인을 안한 상태 -->
-            <button type="button" class="account-button" style="left: 60px;">로그인</button>
-            <button type="button" class="account-button" style="right: 60px;">회원가입</button>
+            <!-- <button type="button" class="account-button" style="left: 60px;">로그인</button>
+            <button type="button" class="account-button" style="right: 60px;">회원가입</button> -->
             <!-- 로그인을 한 상태 -->
-            <!-- <button type="button" class="account-button" style="left: 60px;">로그아웃</button>
-            <button type="button" class="account-button" style="right: 60px;">마이페이지</button> -->
+            <a href=""><button type="button" class="account-button" style="left: 60px;">로그아웃</button></a>
+            <a href="../userpage/usersample.jsp"><button type="button" class="account-button" style="right: 60px;">마이페이지</button></a>
         </div>
-        <form action="<%=contextPath%>/search.me">
+        <form action="">
             <div class="index-frame">
                 <div class="logo-space">
                     <img src="../../resources/logo/psslogomainmenu.png" alt="로고 이미지">
