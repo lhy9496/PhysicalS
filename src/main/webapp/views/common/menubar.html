@@ -90,7 +90,7 @@
         top: 10px;
     }
     #nav{
-        width: 1100px;
+        width: 100%;
         margin: 0 auto;
         margin-top: 70px;
     }
@@ -117,6 +117,9 @@
         font-weight: bold;
         white-space: nowrap;
         color: white;
+    }
+    #nav ul li a:hover{
+        scale: 1.1; 
     }
 
 </style>
@@ -150,16 +153,16 @@
         <div id="nav">
             <ul class="nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">마이페이지</a>
+                  <a class="nav-link" id="mypage-link" href="#">마이페이지</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">운동기록</a>
+                  <a class="nav-link" id="exercise-link" href="#">운동기록</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">식단기록</a>
+                  <a class="nav-link" id="meal-link" href="#">식단기록</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">커뮤니티</a>
+                  <a class="nav-link" id="community-link" href="#">커뮤니티</a>
                 </li>
               </ul>
         </div>

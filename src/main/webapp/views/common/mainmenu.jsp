@@ -5,81 +5,69 @@
     <head>
     <meta charset="UTF-8">
     <title>Insert title here</title>
-    <!-- <link rel="stylesheet" href="../../resources/css/menubar.css"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <!-- Lalogo-search-space compiled JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
+        html{
+            height: 100%;
+            }
         body{
-            height: 330px;
-        }
-        #header {
-            width: 100%;
-            height: 330px;
+            min-height: 100%;
             background-color: rgb(225, 15, 26);
-            position: absolute;
-            top: 0px;
         }
-        .loginout-space{
-            margin-top: 20px;
-            margin-left: 30px;
-            margin-right: 30px;
-            height: 40px;
-            font-size: 25px;
-            text-align: right;
+        .account-space{
+            width: 420px;
+            height: 145px;
+            position: relative;
+            margin-left: auto;
+            margin-right: 0px;
         }
-        #login, #logout{
-            background-color: black;
+        .account-button{
+            width: 135px;
+            height: 45px;
+            font-size: 20px;
+            font-weight: 600;
             color: white;
-            width: 85px;
-            height: 40px;
-            border: 0px;
+            background-color: rgb(225, 15, 26);
+            border: 1px solid rgb(157, 1, 1);
             border-radius: 5px;
-            font-size: 15px;
+            box-shadow: 0px 3px 5px 0px rgb(157, 1, 1);
+            position: absolute;
+            top: 50px;
         }
-        .logo-search-space{
-            width: 1100px;
-            height: 125px;
-            display: flex;
-            margin: 0 auto;
+        .index-frame{
+            width: 720px;
+            height: 2000px;
+            margin-left: auto;
+            margin-right: auto;
+            
         }
         .logo-space{
-            width: 240px;
-            height: 100%;
-            text-align: center;
+            margin-top: 70px;
+            width: 385px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        .search-space-out{
-            width: 860px;
-            margin: 0 auto;
-        }
-        .search-space-in{
-            width: 620px;
-            height: 60px;
+        .search-space{
+            width: 100%;
+            height: 75px;
+            margin-top: 60px;
             border-radius: 15px;
-            text-align: center;
-            margin: 0 auto;
-            margin-top: 30px;
             background-color: white;
             position: relative;
         }
         .search-input{
             text-align: center;
-            font-size: 25px;
+            font-size: 36px;
             font-weight: 500;
             width: 400px;
-            border: 0px;
+            border: none;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
         .search-button{
-            width: 120px;
-            height: 40px;
+            width: 135px;
+            height: 45px;
             font-size: 20px;
             font-weight: 600;
             color: white;
@@ -89,82 +77,29 @@
             box-shadow: 0px 3px 5px 0px rgb(157, 1, 1);
             position: absolute;
             right: 15px;
-            top: 10px;
+            top: 15px;
         }
-        #nav{
-            width: 1100px;
-            margin: 0 auto;
-            margin-top: 70px;
-        }
-        #nav ul, #nav ul li, #nav ul li a{
-            height: 100%;
-            text-align: center;
-        }
-    
-        #nav ul {
-            min-width: 300px;
-            margin-left: 50px;
-            flex-wrap: nowrap;
-        }
-    
-        #nav ul li{
-            min-width: 100px;
-            margin-right: 60px;
-            /* white-space: nowrap; */
-        }
-    
-        #nav ul li a {
-            min-width: 100px;
-            font-size: 24px;
-            font-weight: bold;
-            white-space: nowrap;
-            color: white;
-        }
-    
-    </style>
-    
+      </style>
     </head>
-    
     <body>
-        <div id="header">
-            <div class="loginout-space">
-                <img src="../../resources/icon/person_icon.png" alt="유저 아이콘">
-                흑드라군
-                <button id="login">로그인</button>
-                <!-- <button id="logout">로그아웃</button> -->
-            </div>
-            <div id="logo-search-container">
-                <div class="logo-search-space">
-                    <div class="logo-space">
-                        <a href="<%=contextPath %>">
-                            <img src="../../resources/logo/psslogomenubar.png" alt="로고">
-                            </a>
-                    </div>
-                    <div class="search-space-out" >
-                        <div class="search-space-in">
-                            <input type="text" class="search-input" placeholder="유저 닉네임">
-                            <button type="submit" class="search-button">검색</button>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            <div id="nav">
-                <ul class="nav">
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">마이페이지</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">운동기록</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">식단기록</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">커뮤니티</a>
-                    </li>
-                  </ul>
-            </div>
+        <div class="account-space">
+            <!-- 로그인을 안한 상태 -->
+            <button type="button" class="account-button" style="left: 60px;">로그인</button>
+            <button type="button" class="account-button" style="right: 60px;">회원가입</button>
+            <!-- 로그인을 한 상태 -->
+            <!-- <button type="button" class="account-button" style="left: 60px;">로그아웃</button>
+            <button type="button" class="account-button" style="right: 60px;">마이페이지</button> -->
         </div>
+        <form action="<%=contextPath%>/search.me">
+            <div class="index-frame">
+                <div class="logo-space">
+                    <img src="../../resources/logo/psslogomainmenu.png" alt="로고 이미지">
+                </div>
+                <div class="search-space">
+                    <input type="text" class="search-input" placeholder="유저 닉네임">
+                    <button type="submit" class="search-button">검색</button>
+                </div>
+            </div>
+        </form>
     </body>
     </html>
