@@ -100,38 +100,38 @@
                         let bodyPart = $(this).find('.w_bodypart').text();
 
                         str += `<table class="check_workout_list">
-                  <thead>
-                    <tr>
-                      <th class="td-50 txt-center">`+ exercise + `</th>
-                      <th class="td-25 txt-center">`+ bodyPart + `</th>
-                      <th class="td-25 txt-center" colspan="2">
-                        <button class="btn btn-primary add-set-button">세트 추가</button>
-                      </th>
-                    </tr>
-                  </thead>
-    
-                  <tbody>
-                    <tr>
-                      <td class="txt-center txt-center">세트</td>
-                      <td class="td-25 txt-center">중량</td>
-                      <td class="td-25 txt-center">횟수</td>
-                    </tr>
-                    <tr>
-                      <td class="txt-center">
-                        <input class="bottom-border" type="text" style="width: 50px;"> 
-                        </td>
-                      <td class="td-25 txt-center">
-                        <input class="bottom-border" type="text" style="width: 50px;"> kg
-                      </td>
-                      <td class="td-25 txt-center">
-                        <input class="bottom-border" type="text" style="width: 50px;"> 개
-                      </td>
-                      <td class="td-25 txt-center">
-                        <button class="btn btn-danger delete-set-button">삭제</button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>`;
+				                  <thead>
+				                    <tr>
+				                      <th class="td-50 txt-center">`+ exercise + `</th>
+				                      <th class="td-25 txt-center">`+ bodyPart + `</th>
+				                      <th class="td-25 txt-center" colspan="2">
+				                        <button class="btn btn-primary add-set-button">세트 추가</button>
+				                      </th>
+				                    </tr>
+				                  </thead>
+				    
+				                  <tbody>
+				                    <tr>
+				                      <td class="txt-center txt-center">세트</td>
+				                      <td class="td-25 txt-center">중량</td>
+				                      <td class="td-25 txt-center">횟수</td>
+				                    </tr>
+				                    <tr>
+				                      <td class="txt-center">
+				                        <input class="bottom-border" type="text" style="width: 50px;"> 
+				                        </td>
+				                      <td class="td-25 txt-center">
+				                        <input class="bottom-border" type="text" style="width: 50px;"> kg
+				                      </td>
+				                      <td class="td-25 txt-center">
+				                        <input class="bottom-border" type="text" style="width: 50px;"> 개
+				                      </td>
+				                      <td class="td-25 txt-center">
+				                        <button class="btn btn-danger delete-set-button">삭제</button>
+				                      </td>
+				                    </tr>
+				                  </tbody>
+				                </table>`;
                     }
                 });
 
