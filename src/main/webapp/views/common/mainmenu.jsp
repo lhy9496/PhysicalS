@@ -88,16 +88,17 @@
             <a href=""><button type="button" class="account-button" style="left: 60px;">로그아웃</button></a>
             <a href="../userpage/usersample.jsp"><button type="button" class="account-button" style="right: 60px;">마이페이지</button></a>
         </div>
-        <form action="">
+        
             <div class="index-frame">
                 <div class="logo-space">
                     <img src="../../resources/logo/psslogomainmenu.png" alt="로고 이미지">
                 </div>
-                <div class="search-space">
-                    <input type="text" class="search-input" placeholder="유저 닉네임">
-                    <button type="submit" class="search-button">검색</button>
-                </div>
-            </div>
-        </form>
+                <form action="search.me" method="GET">
+                    <div class="search-space">
+                        <input type="text" class="search-input" name="nickname" placeholder="유저 닉네임">
+                        <button type="submit" class="search-button">검색</button>
+                    </div>
+                </form>
+            </div>        
     </body>
     </html>
