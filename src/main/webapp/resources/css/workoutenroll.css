@@ -8,6 +8,7 @@
   /* height: 900px; */
   margin: 0 auto;
   padding: 50px;
+  margin-top: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
