@@ -119,7 +119,7 @@
                     <img src="../../resources/icon/person_icon.png" alt="인물 이미지">
                 </div>
                 <div class="input-space">
-                    <input type="text" name="userId" id="email" class="input-space" placeholder="이메일" required>
+                    <input type="text" name="userEmail" id="email" class="input-space" placeholder="이메일" required>
                 </div>
                 <div style="margin: auto;">
                     <button type="button" id="checkId" style="display: block;">중복확인</button>
@@ -168,7 +168,7 @@
                     <img src="../../resources/icon/calendar_icon.png" alt="달력 이미지">
                 </div>
                 <div class="input-space">
-                    <input type="text" class="input-space" name="userAge" placeholder="나이" maxlength="3">
+                    <input type="text" class="input-space" name="age" placeholder="나이" maxlength="3">
                 </div>
             </div>
             <div class="gender-line">
