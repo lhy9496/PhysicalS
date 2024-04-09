@@ -51,7 +51,7 @@
         width: 100%;
     }
 
-    #header, #footer{height: 150px;}
+    #header, #footer{height: 250px;}
     #content{
         min-height: 200px;
         height: calc(100% - 200px);
