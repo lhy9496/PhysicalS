@@ -6,11 +6,9 @@
     <meta charset="UTF-8">
     <title>Insert title here</title>
     <style>
-        html{
-            height: 100%;
-            }
         body{
             min-height: 100%;
+            margin: 0;
             background-color: rgb(225, 15, 26);
         }
         .account-space{
@@ -35,7 +33,7 @@
         }
         .index-frame{
             width: 720px;
-            height: 2000px;
+            height: 100%;
             margin-left: auto;
             margin-right: auto;
             

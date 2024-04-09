@@ -14,16 +14,13 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <style>
-    .menubar{
-        height: 250px;
-        z-index: 100;
-    }
     #menubar-header {
         width: 100%;
         height: 250px;
         background-color: rgb(225, 15, 26);
         position: fixed;
         top: 0px;
+        z-index: 10;
     }
     .loginout-space{
         margin-top: 20px;
@@ -127,46 +124,46 @@
 </style>
 </head>
 
-<body class="menubar">
-  <div id="menubar-header">
-      <div class="loginout-space">
-          <img src="../../resources/icon/person_icon.png" alt="유저 아이콘">
-          흑드라군
-          <button id="login">로그인</button>
-          <!-- <button id="logout">로그아웃</button> -->
-      </div>
-      <div id="logo-search-container">
-          <div class="logo-search-space">
-              <div class="logo-space">
-                <a href="../common/mainmenu.jsp">
-                      <img src="../../resources/logo/psslogomenubar.png" alt="로고">
-                </a>
-              </div>
-              <div class="search-space-out" >
-                  <div class="search-space-in">
-                      <input type="text" class="search-input" placeholder="유저 닉네임">
-                      <button type="submit" class="search-button">검색</button>
-                  </div>
-              </div>
-          </div>
-          
-      </div>
-      <div id="menubar-nav">
-          <ul class="nav">
-              <li class="nav-item">
-                <a class="nav-link" href="../userpage/usersample.jsp">마이페이지</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../exercise/workoutview.jsp">운동기록</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../diet/dietsample.jsp">식단기록</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../board/boardsample.jsp">커뮤니티</a>
-              </li>
-            </ul>
-      </div>
-  </div>
+<body >
+        <div id="menubar-header">
+            <div class="loginout-space">
+                <img src="../../resources/icon/person_icon.png" alt="유저 아이콘">
+                흑드라군
+                <button id="login">로그인</button>
+                <!-- <button id="logout">로그아웃</button> -->
+            </div>
+            <div id="logo-search-container">
+                <div class="logo-search-space">
+                    <div class="logo-space">
+                        <a href="../common/mainmenu.jsp">
+                            <img src="../../resources/logo/psslogomenubar.png" alt="로고">
+                        </a>
+                    </div>
+                    <div class="search-space-out" >
+                        <div class="search-space-in">
+                            <input type="text" class="search-input" placeholder="유저 닉네임">
+                            <button type="submit" class="search-button">검색</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="menubar-nav">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../userpage/usersample.jsp">마이페이지</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../exercise/workoutview.jsp">운동기록</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../diet/dietsample.jsp">식단기록</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../board/boardsample.jsp">커뮤니티</a>
+                    </li>
+                    </ul>
+            </div>
+        </div>
 </body>
 </html>
