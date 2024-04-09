@@ -247,24 +247,31 @@
 
             if(emailInput.value != null){
 
-                $.ajax({
-                    type : "GET",
-                    url : "idCheck.me",
-                    data: {
-                        checkId : emailInput.value
-                    },
-                    success: function(){
-                        // 사용가능한 이메일입니다.
-                        emailInput.readOnly = true;
-                        checkId.style.display = "none";
-                        resetId.style.display = "block";
-                        enroll_button.disabled = false;
-                    },
-                    error: function(){
-                        // 이미 존재하는 아이디입니다.
-                        emailInput.value = ""
-                    }
-                })
+            	//ajax용 코드
+                // $.ajax({
+                //     type : "GET",
+                //     url : "idCheck.me",
+                //     data: {
+                //         checkId : emailInput.value
+                //     },
+                //     success: function(){
+                //         // 사용가능한 이메일입니다.
+                //         emailInput.readOnly = true;
+                //         checkId.style.display = "none";
+                //         resetId.style.display = "block";
+                //         enroll_button.disabled = false;
+                //     },
+                //     error: function(){
+                //         // 이미 존재하는 아이디입니다.
+                //         emailInput.value = ""
+                //     }
+                // })
+                // 기능 확인용 코드
+                emailInput.readOnly = true;
+                checkId.style.display = "none";
+                resetId.style.display = "block";
+                enroll_button.disabled = false;
+                enroll_button.style.cursor = "pointer"
             }
         }
         resetId.onclick = function(){
