@@ -14,8 +14,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <style>
-    body{
+    .menubar{
         height: 250px;
+        z-index: 100;
     }
     #menubar-header {
         width: 100%;
@@ -96,7 +97,7 @@
         margin: 0 auto;
     }
     #menubar-nav ul, #menubar-nav ul li, #menubar-nav ul li a{
-        height: 100%;
+        height: 60px;
         text-align: center;
     }
 
@@ -115,18 +116,18 @@
     #menubar-nav ul li a {
         min-width: 100px;
         font-size: 24px;
-        font-weight: bold;
         white-space: nowrap;
         color: white;
     }
     #menubar-nav ul li a:hover{
-        scale: 1.1; 
+        scale: 1.1;
+        font-weight: bold;
     }
 
 </style>
 </head>
 
-<body>
+<body class="menubar">
   <div id="menubar-header">
       <div class="loginout-space">
           <img src="../../resources/icon/person_icon.png" alt="유저 아이콘">

@@ -112,10 +112,10 @@
     </style>
 </head>
 <body>
-    <form action="<%=contextPath%>/login.me" id="login-form" method="POST">
+    <form action="" id="login-form" method="POST">
         <div class="login-frame">
             <div class="logo-space">
-                <a href="<%=contextPath %>" ><img src="../../resources/logo/psslogologin.png" alt="로고 이미지"></a>
+                <a href="../common/mainmenu.jsp" ><img src="../../resources/logo/psslogologin.png" alt="로고 이미지"></a>
             </div>
             <div class="input-background">
                 <div class="input-lineId">
@@ -140,10 +140,10 @@
             </div>
             <div class="etc-line">
                 <div class="etc-space">
-                    <a href="<%=contextPath %>/findIdPwd.me"><button type="button" class="etc-button">ID/PW 찾기</button></a>
+                    <a href=""><button type="button" class="etc-button">ID/PW 찾기</button></a>
                 </div>
                 <div class="etc-space">
-                    <a href="<%=contextPath %>/enroll.me"><button type="button" class="etc-button">회원가입</button></a>
+                    <a href=""><button type="button" class="etc-button">회원가입</button></a>
                 </div>
             </div>
         </div>

@@ -107,16 +107,16 @@
 </style>
 </head>
 <body>
-    <form action="<%=contextPath%>/insert.me" id="enroll-form" method="POST">
+    <form action="" id="enroll-form" method="POST">
         <div class="signup-frame">
             <!-- 로고 -->
             <div class="logo-space">
-                <a href="<%=contextPath %>"><img src="../../resources/logo/psslogoenroll.png"  alt="로고 이미지"></a>
+                <a href="../common/mainmenu.jsp"><img src="../../resources/logo/psslogoenroll.png"  alt="로고 이미지"></a>
             </div>
             <!-- 상단 입력칸 3개 -->
             <div class="top-line">
                 <div class="icon-space">
-                    <img src="../resources/icon/person_icon.png" alt="인물 이미지">
+                    <img src="../../resources/icon/person_icon.png" alt="인물 이미지">
                 </div>
                 <div class="input-space">
                     <input type="text" name="userId" id="email" class="input-space" placeholder="이메일" required>
