@@ -17,6 +17,7 @@ body{
 .left-container {
   width: 620px;
   padding: 50px;
+  padding-top: 20px;
 }
 
 .right-container {
@@ -24,6 +25,7 @@ body{
   /* min-width: 1000px; */
   height: 100%;
   padding: 50px;
+  padding-top: 20px;
   color: black;
 }
 
@@ -58,6 +60,7 @@ td {
   border-radius: 10px;
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .workout{
@@ -91,4 +94,13 @@ td {
 .workout-record>tbody>tr>td {
   background-color: antiquewhite;
   border-radius: 10px;
+}
+
+#workout-container {
+  height: 410px;
+  overflow: scroll;
+}
+
+#workout-container::-webkit-scrollbar{
+  display: none;
 }

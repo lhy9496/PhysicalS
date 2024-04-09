@@ -2,12 +2,10 @@
   box-sizing: border-box;
 }
 
-
 .workoutenroll-area {
   width: 70%;
-  /* height: 900px; */
   margin: 0 auto;
-  padding: 50px;
+  /* padding: 50px; */
   margin-top: 250px;
   display: flex;
   flex-direction: column;
@@ -16,14 +14,14 @@
 }
 
 #workout-list-area {
-  width: 100%;
+  width: 75%;
   height: 400px;
   overflow: scroll;
-  margin: 50px;
+  /* margin: 50px; */
 }
 
 .workout-list-item {
-  width: 80%;
+  width: 100%;
   margin: auto;
   padding: 10px;
   background: #d9d9d9;
