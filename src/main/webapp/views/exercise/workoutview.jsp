@@ -38,7 +38,6 @@
     <div class="content-container">
         <div class="left-container">
 
-            <br>
             <h2>기록하기</h2>
             <br>
 
@@ -52,39 +51,76 @@
                 </div>
             </div>
 
-            <div class="workout-info">
-                <div class="workout">
-                    <div class="workout-name">벤치프레스</div>
-                    <div class="workout-bodypart">가슴</div>
+            <div id="workout-container">
+                <div class="workout-info">
+                    <div class="workout">
+                        <div class="workout-name">벤치프레스</div>
+                        <div class="workout-bodypart">가슴</div>
+                    </div>
+                    <table class="workout-record">
+                        <thead>
+                            <tr>
+                                <td>세트</td>
+                                <td>중량</td>
+                                <td>횟수</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>50kg</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>50kg</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>50kg</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <table class="workout-record">
-                    <thead>
-                        <tr>
-                            <td>세트</td>
-                            <td>중량</td>
-                            <td>횟수</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>50kg</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>50kg</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>50kg</td>
-                            <td>10</td>
-                        </tr>
-                    </tbody>
-                </table>
 
+                <div class="workout-info">
+                    <div class="workout">
+                        <div class="workout-name">벤치프레스</div>
+                        <div class="workout-bodypart">가슴</div>
+                    </div>
+                    <table class="workout-record">
+                        <thead>
+                            <tr>
+                                <td>세트</td>
+                                <td>중량</td>
+                                <td>횟수</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>50kg</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>50kg</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>50kg</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                
             </div>
+            
         </div>
 
         <div class="right-container">
