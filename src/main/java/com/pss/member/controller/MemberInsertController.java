@@ -39,6 +39,12 @@ public class MemberInsertController extends HttpServlet {
 		
 		int result = new MemberService().insertMember(m);
 		
+		if (result > 0) {
+			
+		} else {
+			
+		}
+		
 	}
 
 	/**
