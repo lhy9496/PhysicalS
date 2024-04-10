@@ -11,6 +11,14 @@ DROP TABLE CATEGORY;
 DROP TABLE USER_PIC;
 DROP TABLE MEMBER;
 
+DROP SEQUENCE SEQ_MRNO;
+DROP SEQUENCE SEQ_MNO;
+DROP SEQUENCE SEQ_EXRO;
+DROP SEQUENCE SEQ_EXPNO;
+DROP SEQUENCE SEQ_RNO;
+DROP SEQUENCE SEQ_BNO;
+DROP SEQUENCE SEQ_UNO;
+
 --==============================================================================
 -- 회원 테이블
 CREATE TABLE MEMBER (
@@ -52,6 +60,12 @@ NOCACHE;
 
 INSERT INTO MEMBER
 VALUES (SEQ_UNO.NEXTVAL, '관리자', 'admin', 'admin@ps5.com', 'qwer', 'M', 22, NULL, NULL, NULL, NULL, 0,sysdate,sysdate,'Y');
+
+INSERT INTO MEMBER
+VALUES (SEQ_UNO.NEXTVAL, '회원1', 'user1', 'user1@ps5.com', 'user1', 'M', 26, NULL, NULL, NULL, NULL, 0,sysdate,sysdate,'Y');
+
+INSERT INTO MEMBER
+VALUES (SEQ_UNO.NEXTVAL, '회원2', 'user2', 'user2@ps5.com', 'user2', 'M', 23, NULL, NULL, NULL, NULL, 0,sysdate,sysdate,'Y');
 --==============================================================================
 --회원 프로필 사진 테이블
 CREATE TABLE USER_PIC (
@@ -162,6 +176,17 @@ COMMENT ON COLUMN EXERCISE.EX_NO IS '운동번호';
 COMMENT ON COLUMN EXERCISE.BPART_NO IS '운동부위번호';
 COMMENT ON COLUMN EXERCISE.EX_NAME IS '운동이름';
 
+INSERT INTO EXERCISE VALUES(1,1,'데드리프트');
+INSERT INTO EXERCISE VALUES(2,1,'렛풀다운');
+INSERT INTO EXERCISE VALUES(3,2,'오버헤드프레');
+INSERT INTO EXERCISE VALUES(4,2,'사이드레터럴레이즈');
+INSERT INTO EXERCISE VALUES(5,3,'플랫벤치프레스');
+INSERT INTO EXERCISE VALUES(6,3,'체스트프레스');
+INSERT INTO EXERCISE VALUES(7,4,'스쿼트');
+INSERT INTO EXERCISE VALUES(8,4,'레그프레스');
+INSERT INTO EXERCISE VALUES(9,5,'덤벨컬');
+INSERT INTO EXERCISE VALUES(10,5,'케이블 푸쉬 다운');
+
 --==============================================================================
 --운동수행 테이블
 CREATE TABLE EX_PERFORMANCE (
@@ -182,7 +207,7 @@ COMMENT ON COLUMN EX_PERFORMANCE.EXP_SET IS '운동수행세트수';
 COMMENT ON COLUMN EX_PERFORMANCE.EXP_WEIGHT IS '운동수행중량';
 COMMENT ON COLUMN EX_PERFORMANCE.EXP_COUNT IS '운동수행횟수';
 
-CREATE SEQUENCE SEQ_EXPN
+CREATE SEQUENCE SEQ_EXPNO
 NOCACHE;
 --==============================================================================
 --운동기록
@@ -200,7 +225,7 @@ COMMENT ON COLUMN EX_RECORD.USER_NO IS '회원번호';
 COMMENT ON COLUMN EX_RECORD.EXP_NO IS '운동수행번호';
 COMMENT ON COLUMN EX_RECORD.EXR_RECORD_DATE IS '운동기록날짜';
 
-CREATE SEQUENCE SEQ_EXRN
+CREATE SEQUENCE SEQ_EXRNO
 NOCACHE;
 --==============================================================================
 -- 음식 테이블
@@ -235,7 +260,7 @@ COMMENT ON COLUMN MEAL.FOOD_NO IS '음식번호';
 COMMENT ON COLUMN MEAL.FOOD_AMOUNT IS '음식갯수';
 COMMENT ON COLUMN MEAL.WHEN_EAT IS '식사타이밍(B:아침, L:점심, D:저녁, E:간식/기타)';
 
-CREATE SEQUENCE SEQ_MN
+CREATE SEQUENCE SEQ_MNO
 NOCACHE;
 --==============================================================================
 -- 식사기록테이블
@@ -253,7 +278,7 @@ COMMENT ON COLUMN MEAL_RECORD.USER_NO IS '유저번호';
 COMMENT ON COLUMN MEAL_RECORD.MEAL_NO IS '식사번호';
 COMMENT ON COLUMN MEAL_RECORD.WHEN_EAT_DATE IS '식사날짜';
 
-CREATE SEQUENCE SEQ_MRN
+CREATE SEQUENCE SEQ_MRNO
 NOCACHE;
 --======생성 후 커밋=============================================================
 COMMIT;
