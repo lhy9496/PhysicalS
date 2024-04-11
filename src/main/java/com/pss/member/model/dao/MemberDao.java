@@ -2,34 +2,21 @@ package com.pss.member.model.dao;
 
 
 
-import com.pss.member.model.vo.Member;
+import org.apache.ibatis.session.SqlSession;
 
+import com.pss.member.model.vo.Member;
 
 public class MemberDao {
 	
-	public int insertMember(Connection conn, Member m) {
-		PreparedStatement pstmt = null;
-		String sql = prop.getProperty("insertMember");
-			
-		int result = 0;
+	public int insertMember(SqlSession sqlSession, Member m) {
 		
-		try {
-			pstmt = conn.prepareStatement(sql);
-			
-			pstmt.setString(1, m.getUserName());
-			pstmt.setString(2, m.getUserNickname());
-			pstmt.setString(3, m.getUserEmail());
-			pstmt.setString(4, m.getUserPwd());
-			pstmt.setString(5, m.getGender());
-			pstmt.setInt(6, m.getAge());
+		int result = sqlSession.insert("memberMapper.insertMember", m);
 		
-			result = pstmt.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			close(pstmt);
-		}
 		return result;
+	}
+	
+	public Member loginMember(SqlSession sqlSession, Member m) {
 		
+		return sqlSession.selectOne("memberMapper.loginMember", m);
 	}
 }

@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.pss.member.model.vo.Member;
+import com.pss.member.service.MemberServiceImpl;
+
 /**
  * Servlet implementation class MemberLoginController
  */
@@ -26,8 +29,20 @@ public class MemberLoginController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		request.setCharacterEncoding("UTF-8");
+		
+		Member m = new Member();
+		
+		m.setUserEmail(request.getParameter("userEmail"));
+		m.setUserPwd(request.getParameter("userPwd"));
+		
+		Member loginUser = new MemberServiceImpl().loginMember(m);
+		
+		if (loginUser == null) {
+			
+		} else {
+			
+		}
 	}
 
 	/**
