@@ -10,14 +10,9 @@ public class Member {
 	private String userPwd;
 	private String gender;
 	private int age;
-	private int height;
-	private int weight;
-	private int smm;
-	private int bfp;
-	private int userPoint;
 	private Date enrollDate;
 	private Date modifyDate;
-	private String Status;
+	private String status;
 	
 	public Member() {
 		super();
@@ -34,8 +29,7 @@ public class Member {
 	}
 
 	public Member(int userNo, String userName, String userNickname, String userEmail, String userPwd, String gender,
-			int age, int height, int weight, int smm, int bfp, int userPoint, Date enrollDate, Date modifyDate,
-			String status) {
+			int age, Date enrollDate, Date modifyDate, String status) {
 		super();
 		this.userNo = userNo;
 		this.userName = userName;
@@ -44,14 +38,9 @@ public class Member {
 		this.userPwd = userPwd;
 		this.gender = gender;
 		this.age = age;
-		this.height = height;
-		this.weight = weight;
-		this.smm = smm;
-		this.bfp = bfp;
-		this.userPoint = userPoint;
 		this.enrollDate = enrollDate;
 		this.modifyDate = modifyDate;
-		Status = status;
+		this.status = status;
 	}
 
 	public int getUserNo() {
@@ -110,46 +99,6 @@ public class Member {
 		this.age = age;
 	}
 
-	public int getHeight() {
-		return height;
-	}
-
-	public void setHeight(int height) {
-		this.height = height;
-	}
-
-	public int getWeight() {
-		return weight;
-	}
-
-	public void setWeight(int weight) {
-		this.weight = weight;
-	}
-
-	public int getSmm() {
-		return smm;
-	}
-
-	public void setSmm(int smm) {
-		this.smm = smm;
-	}
-
-	public int getBfp() {
-		return bfp;
-	}
-
-	public void setBfp(int bfp) {
-		this.bfp = bfp;
-	}
-
-	public int getUserPoint() {
-		return userPoint;
-	}
-
-	public void setUserPoint(int userPoint) {
-		this.userPoint = userPoint;
-	}
-
 	public Date getEnrollDate() {
 		return enrollDate;
 	}
@@ -167,20 +116,21 @@ public class Member {
 	}
 
 	public String getStatus() {
-		return Status;
+		return status;
 	}
 
 	public void setStatus(String status) {
-		Status = status;
+		this.status = status;
 	}
 
 	@Override
 	public String toString() {
 		return "Member [userNo=" + userNo + ", userName=" + userName + ", userNickname=" + userNickname + ", userEmail="
-				+ userEmail + ", userPwd=" + userPwd + ", gender=" + gender + ", age=" + age + ", height=" + height
-				+ ", weight=" + weight + ", smm=" + smm + ", bfp=" + bfp + ", userPoint=" + userPoint + ", enrollDate="
-				+ enrollDate + ", modifyDate=" + modifyDate + ", Status=" + Status + "]";
+				+ userEmail + ", userPwd=" + userPwd + ", gender=" + gender + ", age=" + age + ", enrollDate="
+				+ enrollDate + ", modifyDate=" + modifyDate + ", status=" + status + "]";
 	}
+
+	
 	
 	
 	
