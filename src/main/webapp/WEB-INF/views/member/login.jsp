@@ -115,7 +115,7 @@
     <form action="" id="login-form" method="POST">
         <div class="login-frame">
             <div class="logo-space">
-                <a href="../common/mainmenu.jsp" ><img src="../../resources/logo/psslogologin.png" alt="로고 이미지"></a>
+                <a href="${contextPath}" ><img src="../../resources/logo/psslogologin.png" alt="로고 이미지"></a>
             </div>
             <div class="input-background">
                 <div class="input-lineId">

@@ -82,11 +82,11 @@
     <body>
         <div class="account-space">
             <!-- 로그인을 안한 상태 -->
-            <!-- <button type="button" class="account-button" style="left: 60px;">로그인</button>
-            <button type="button" class="account-button" style="right: 60px;">회원가입</button> -->
+            <button type="button" class="account-button" onclick="location.href='loginForm.me'" style="left: 60px;">로그인</button>
+            <button type="button" class="account-button" onclick="location.href='enrollForm.me'" style="right: 60px;">회원가입</button>
             <!-- 로그인을 한 상태 -->
-            <a href=""><button type="button" class="account-button" style="left: 60px;">로그아웃</button></a>
-            <a href="../userpage/usersample.jsp"><button type="button" class="account-button" style="right: 60px;">마이페이지</button></a>
+            <a href=""><button type="button" class="account-button" onclick="location.href='logout.me'" style="left: 60px;">로그아웃</button></a>
+            <a href="../userpage/usersample.jsp"><button type="button" class="account-button" onclick="location.href=''" style="right: 60px;">마이페이지</button></a>
         </div>
         
             <div class="index-frame">

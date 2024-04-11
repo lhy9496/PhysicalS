@@ -107,11 +107,11 @@
 </style>
 </head>
 <body>
-    <form action="" id="enroll-form" method="POST">
+    <form action="insert.me" id="enroll-form" method="POST">
         <div class="signup-frame">
             <!-- 로고 -->
             <div class="logo-space">
-                <a href="../common/mainmenu.jsp"><img src="../../resources/logo/psslogoenroll.png"  alt="로고 이미지"></a>
+                <a href="${contextPath}"><img src="../../resources/logo/psslogoenroll.png"  alt="로고 이미지"></a>
             </div>
             <!-- 상단 입력칸 3개 -->
             <div class="top-line">
