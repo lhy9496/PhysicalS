@@ -153,7 +153,7 @@
 </style>
 </head>
 <body>
-    <%@ include file="views/common/menubar.jsp" %>
+    <%@ include file="WEB-INF/views/common/menubar.jsp" %>
 
     <div class="bodyofbody">
         <div class="top box" style="height: 50px; padding-left: 5px;">
@@ -169,10 +169,10 @@
                     </div>
                     <div class="box" style="width: 60%; height: 100%;">
                         <div class="box" style="height: 55%; text-align: center; padding-top: 60px; padding-right: 70px;">
-                            <h1>흑드라군</h1>
+                            <h1>${searchUser.userName}</h1>
                         </div>
                         <div class="box" style="height: 45%; text-align: center; padding-right: 70px;">
-                            <h3>27 / 남</h3>
+                            <h3>${searchUser.age} / ${searchUser.gender}</h3>
                         </div>
                     </div>
                 </div>

@@ -5,7 +5,21 @@
   
 <mapper namespace="userpageMapper">
 
-	<select id="loginMember" parameterType="String" resultMap="memberResultSet">
+	<select id="SearchUser" parameterType="String" resultMap="memberResultSet">
+ 		SELECT 가져올 컬럼들
+		FROM MEMBER
+		WHERE NICKNAME = #{nickname}
+		AND STATUS = 'Y'
+ 	</select>
+ 	
+ 	<select id="SearchUserDiet" parameterType="String" resultMap="memberResultSet">
+ 		SELECT 가져올 컬럼들
+		FROM MEMBER
+		WHERE NICKNAME = #{nickname}
+		AND STATUS = 'Y'
+ 	</select>
+ 	
+ 	<select id="SearchUserExercise" parameterType="String" resultMap="memberResultSet">
  		SELECT 가져올 컬럼들
 		FROM MEMBER
 		WHERE NICKNAME = #{nickname}
