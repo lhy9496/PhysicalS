@@ -1,6 +1,7 @@
 package com.pss.userpage.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,17 +36,17 @@ public class SearchUserController extends HttpServlet {
 		
 		String nickname = request.getParameter("nickname");
 		
-		Member searchUser = new SearchUserImpl().searchUser(nickname);
-		Diet diet = new SearchUserImpl().searchUserDiet(nickname);
-		Exercise exercise = new SearchUserImpl().searchUserExercise(nickname);
+		ArrayList<Object> list = new ArrayList<>();
 		
-		if (searchUser == null) {
+		list = new SearchUserImpl().searchUser(nickname);
+		
+		if ((Member)list.get(0) == null) {
 			request.setAttribute("errorMsg", "존재하지 않는 유저입니다.");
 			response.sendRedirect(request.getContextPath());
 		} else {
-			request.getSession().setAttribute("searchUser", searchUser);
-			request.getSession().setAttribute("diet", diet);
-			request.getSession().setAttribute("exercise", exercise);
+			request.getSession().setAttribute("searchUser", (Member)list.get(0));
+			request.getSession().setAttribute("diet", (Diet)list.get(1));
+			request.getSession().setAttribute("exercise", (Exercise)list.get(2));
 			request.getRequestDispatcher("WEB-INF/views/userpage/userpage.jsp").forward(request, response);
 		}
 	}
