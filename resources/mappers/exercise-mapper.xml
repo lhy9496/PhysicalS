@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="exerciseMapper">
+	<resultMap id="exerciseResultSet" type="Exercise">
+		<result column="ex_no" property="exerciseNo"/>
+		<result column="bpart_name" property="bodyPart"/>
+		<result column="ex_name" property="exerciseName"/>
+	</resultMap>
+
+	<select id="selectExerciseList" resultMap="exerciseResultSet">
+		SELECT EX_NAME,
+			   BPART_NAME
+		FROM EXERCISE
+		JOIN BODYPART USING (BPART_NO)
+		ORDER BY EX_NO
+	</select>
+
+
+</mapper>
