@@ -1,4 +1,4 @@
-package com.pss.exercise;
+package com.pss.exercise.Controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class BoardSampleServlet
+ * Servlet implementation class WorkoutRecordController
  */
-@WebServlet("/ExerciseSampleServlett")
-public class ExerciseSampleServlet extends HttpServlet {
+@WebServlet("/WorkoutRecordController")
+public class WorkoutRecordController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ExerciseSampleServlet() {
+    public WorkoutRecordController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,8 +26,7 @@ public class ExerciseSampleServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 	}
 
 	/**

@@ -14,7 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../../resources/css/workoutenroll.css?after">
+    <link rel="stylesheet" href="../../../resources/css/workoutenroll.css?after">
 </head>
 
 <body>
@@ -83,7 +83,7 @@
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" id="btn-enroll-workout">등록</button>
                 </div>
             </div>
         </div>
@@ -119,7 +119,7 @@
 				                    <tr>
 				                      <td class="txt-center">
 				                        <input class="bottom-border" type="text" style="width: 50px;"> 
-				                        </td>
+				                      </td>
 				                      <td class="td-25 txt-center">
 				                        <input class="bottom-border" type="text" style="width: 50px;"> kg
 				                      </td>
@@ -130,7 +130,7 @@
 				                        <button class="btn btn-danger delete-set-button">삭제</button>
 				                      </td>
 				                    </tr>
-				                  </tbody>
+                          </tbody>
 				                </table>`;
                     }
                 });
@@ -163,6 +163,10 @@
                     $(this).closest('tr').remove();
                 });
             }
+            
+            $('#btn-enroll-workout').on('click',function() {
+
+            })
         })
 
 
