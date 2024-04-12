@@ -14,7 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../resources/css/workoutenroll.css?after">
+    <link rel="stylesheet" href="resources/css/workoutenroll.css?after">
 </head>
 
 <body>
@@ -22,39 +22,19 @@
     <div class="workoutenroll-area">
 
         <h2 align="center" style="font-size: 50px; margin: 50px;">운동을 선택해주세요</h2>
-
+		
+			
+		
         <div id="workout-list-area">
+       	  <c:forEach var="ex" items="${exList }">
             <div class="workout-list-item">
-                <div class="w_name">벤치프레스</div>
-                <div class="w_bodypart">가슴</div>
+                <div class="w_name">${ex.exerciseName }</div>
+                <div class="w_bodypart">${ex.bodyPart }</div>
                 <div class="w_checkbox">
                     <input type="checkbox" name="workout" class="workout_chkbox" style="zoom: 2.0;">
                 </div>
             </div>
-
-            <div class="workout-list-item">
-                <div class="w_name">스쿼트</div>
-                <div class="w_bodypart">하체</div>
-                <div class="w_checkbox">
-                    <input type="checkbox" name="workout" class="workout_chkbox" style="zoom: 2.0;">
-                </div>
-            </div>
-
-            <div class="workout-list-item">
-                <div class="w_name">오버헤드프레스</div>
-                <div class="w_bodypart">어깨</div>
-                <div class="w_checkbox">
-                    <input type="checkbox" name="workout" class="workout_chkbox" style="zoom: 2.0;">
-                </div>
-            </div>
-
-            <div class="workout-list-item">
-                <div class="w_name">데드리프트</div>
-                <div class="w_bodypart">등</div>
-                <div class="w_checkbox">
-                    <input type="checkbox" name="workout" class="workout_chkbox" style="zoom: 2.0;">
-                </div>
-            </div>
+		  </c:forEach>     
         </div>
 
         <div id="btn-area">
@@ -83,7 +63,7 @@
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" id="btn-enroll-workout">등록</button>
+                    <button type="button" class="btn-lg btn-primary" id="btn-enroll-workout" style="margin:auto;">등록</button>
                 </div>
             </div>
         </div>
@@ -102,8 +82,8 @@
                         str += `<table class="check_workout_list">
 				                  <thead>
 				                    <tr>
-				                      <th class="td-50 txt-center">`+ exercise + `</th>
-				                      <th class="td-25 txt-center">`+ bodyPart + `</th>
+				                      <th class="td-50 txt-center exerciseName">`+ exercise + `</th>
+				                      <th class="td-25 txt-center bodyPart">`+ bodyPart + `</th>
 				                      <th class="td-25 txt-center" colspan="2">
 				                        <button class="btn btn-primary add-set-button">세트 추가</button>
 				                      </th>
@@ -118,19 +98,19 @@
 				                    </tr>
 				                    <tr>
 				                      <td class="txt-center">
-				                        <input class="bottom-border" type="text" style="width: 50px;"> 
+				                        <input class="bottom-border exerciseSet" type="text" style="width: 50px;"> 
 				                      </td>
 				                      <td class="td-25 txt-center">
-				                        <input class="bottom-border" type="text" style="width: 50px;"> kg
+				                        <input class="bottom-border exerciseWeight" type="text" style="width: 50px;"> kg
 				                      </td>
 				                      <td class="td-25 txt-center">
-				                        <input class="bottom-border" type="text" style="width: 50px;"> 개
+				                        <input class="bottom-border exerciseCount" type="text" style="width: 50px;"> 개
 				                      </td>
 				                      <td class="td-25 txt-center">
 				                        <button class="btn btn-danger delete-set-button">삭제</button>
 				                      </td>
 				                    </tr>
-                          </tbody>
+                          		  </tbody>
 				                </table>`;
                     }
                 });
@@ -145,13 +125,13 @@
                     let tbody = $(this).closest('table').find('tbody');
                     tbody.append(`<tr>
                               <td class="txt-center">
-                                <input class="bottom-border" type="text" style="width: 50px;">
+                                <input class="bottom-border exerciseSet" type="text" style="width: 50px;">
                                 </td>
                               <td class="td-25 txt-center">
-                                <input class="bottom-border" type="text" style="width: 50px;"> kg
+                                <input class="bottom-border exerciseWeight" type="text" style="width: 50px;"> kg
                               </td>
                               <td class="td-25 txt-center">
-                                <input class="bottom-border" type="text" style="width: 50px;"> 개
+                                <input class="bottom-border exerciseCount" type="text" style="width: 50px;"> 개
                               </td>
                               <td class="td-25 txt-center">
                                 <button class="btn btn-danger delete-set-button">삭제</button>
@@ -165,7 +145,7 @@
             }
             
             $('#btn-enroll-workout').on('click',function() {
-
+                
             })
         })
 

@@ -33,6 +33,7 @@ public class WorkoutEnrollController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		ArrayList<Exercise> exList = new ExerciseServiceImpl().selectExerciseList();
+		request.setAttribute("exList", exList);
 		request.getRequestDispatcher("views/exercise/workoutenrollview.jsp").forward(request, response);
 	}
 

@@ -11,13 +11,12 @@ import com.pss.exercise.model.vo.Exercise;
 public class ExerciseServiceImpl implements ExerciseService{
 
 	private ExerciseDao exerciseDao = new ExerciseDao();
+	
 	@Override
 	public ArrayList<Exercise> selectExerciseList() {
 		SqlSession sqlSession = Template.getSqlSession();
 		ArrayList<Exercise> exList = exerciseDao.selectExerciseList(sqlSession);
 		return exList;
 	}
-	
-	
 
 }

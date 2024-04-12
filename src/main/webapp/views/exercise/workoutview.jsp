@@ -128,9 +128,10 @@
         </div>
     </div>
     <script>
+    
         $(function () {
             $(".addWorkout").on("click", function () {
-                location.href = "enroll.wo";
+                location.href = "${pageContext.request.contextPath}/enroll.wo";
             })
         })
     </script>
