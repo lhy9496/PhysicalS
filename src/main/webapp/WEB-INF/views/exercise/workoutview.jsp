@@ -130,7 +130,7 @@
     <script>
         $(function () {
             $(".addWorkout").on("click", function () {
-                location.href = "workoutenrollview.jsp";
+                location.href = "enroll.wo";
             })
         })
     </script>
