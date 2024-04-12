@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -164,7 +166,8 @@
 </style>
 </head>
 <body>
-    <%@ include file="views/common/menubar.jsp" %>
+    <jsp:include page="menubar.jsp" />
+
 
     <div class="bodyofbody">
         <div class="top box" style="height: 50px; padding-left: 5px;">
