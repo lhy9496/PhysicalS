@@ -44,9 +44,11 @@
         margin-right: 0; /* 마지막 자식 요소의 오른쪽 마진은 0으로 지정하여 마지막 요소 뒤에는 간격을 주지 않음 */
     }
 
+    /*
     .box{
         border: 1px solid black;
     }
+    */
 
     .previousTear{
         height: 30px;
@@ -113,7 +115,9 @@
     .titlearea{
         display: flex;
         align-items: flex-end;
-        margin-left: 10px;
+        justify-content: space-between;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .centeralign{
@@ -150,10 +154,17 @@
         justify-content: flex-start;
     }
 
+    .end{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 10px;
+    }
+
 </style>
 </head>
 <body>
-    <%@ include file="WEB-INF/views/common/menubar.jsp" %>
+    <%@ include file="views/common/menubar.jsp" %>
 
     <div class="bodyofbody">
         <div class="top box" style="height: 50px; padding-left: 5px;">
@@ -169,7 +180,7 @@
                     </div>
                     <div class="box" style="width: 60%; height: 100%;">
                         <div class="box" style="height: 55%; text-align: center; padding-top: 60px; padding-right: 70px;">
-                            <h1>${searchUser.userName}</h1>
+                            <h1>${searchUser.name}</h1>
                         </div>
                         <div class="box" style="height: 45%; text-align: center; padding-right: 70px;">
                             <h3>${searchUser.age} / ${searchUser.gender}</h3>
@@ -195,19 +206,32 @@
                     <div class="box bodybox">
                         <div class="box titlearea" style="height: 10%;">
                             <h2>신체정보</h2>
+                            <a>수정버튼</a>
                         </div>
                         <div class="box" style="height: 90%;">
                             <div class="box flex-box" style="height: 25%;">
-                                <div class="box spac">키</div>
+                                <div class="box spac">
+                                    <div class="box flex-box" style="width: 50%; height: 100%;"><b>키</b></div>
+                                    <div class="box flex-box" style="width: 50%; height: 100%;">${searchUser.height}</div>
+                                </div>
                             </div>
                             <div class="box flex-box" style="height: 25%;">
-                                <div class="box spac">체중</div>
+                                <div class="box spac">
+                                    <div class="box flex-box" style="width: 50%; height: 100%;"><b>체중</b></div>
+                                    <div class="box flex-box" style="width: 50%; height: 100%;">${searchUser.weight}</div>
+                                </div>
                             </div>
                             <div class="box flex-box" style="height: 25%;">
-                                <div class="box spac">근육량</div>
+                                <div class="box spac">
+                                    <div class="box flex-box" style="width: 50%; height: 100%;"><b>체지방률</b></div>
+                                    <div class="box flex-box" style="width: 50%; height: 100%;">${searchUser.bep}</div>
+                                </div>
                             </div>
                             <div class="box flex-box" style="height: 25%;">
-                                <div class="box spac">체지방량</div>
+                                <div class="box spac">
+                                    <div class="box flex-box" style="width: 50%; height: 100%;"><b>골격근량</b></div>
+                                    <div class="box flex-box" style="width: 50%; height: 100%;">${searchUser.smm}</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -253,7 +277,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="box rightro" style="width: 5%; height:100%; background: #464646;">아래로</div>
+                        <div class="box rightro end" style="width: 5%; height:100%; background: #464646; color: white;">버튼</div>
                     </div>
                 </div>
                 
@@ -293,7 +317,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="box rightro" style="width: 5%; height:100%; background: #464646;">아래로</div>
+                        <div class="box rightro end" style="width: 5%; height:100%; background: #464646; color: white;">버튼</div>
                     </div>
                 </div>
 
@@ -333,7 +357,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="box rightro" style="width: 5%; height:100%; background: #464646;">아래로</div>
+                        <div class="box rightro end" style="width: 5%; height:100%; background: #464646; color: white;">버튼</div>
                     </div>
                 </div>
 
@@ -373,7 +397,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="box rightro" style="width: 5%; height:100%; background: #464646;">아래로</div>
+                        <div class="box rightro end" style="width: 5%; height:100%; background: #464646; color: white;">버튼</div>
                     </div>
                 </div>
 
@@ -413,7 +437,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="box rightro" style="width: 5%; height:100%; background: #464646;">아래로</div>
+                        <div class="box rightro end" style="width: 5%; height:100%; background: #464646; color: white;">버튼</div>
                     </div>
                 </div>
 
@@ -453,7 +477,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="box rightro" style="width: 5%; height:100%; background: #464646;">아래로</div>
+                        <div class="box rightro end" style="width: 5%; height:100%; background: #464646; color: white;">버튼</div>
                     </div>
                 </div>
 
@@ -493,7 +517,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="box rightro" style="width: 5%; height:100%; background: #464646;">아래로</div>
+                        <div class="box rightro end" style="width: 5%; height:100%; background: #464646; color: white;">버튼</div>
                     </div>
                 </div>
 
@@ -533,7 +557,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="box rightro" style="width: 5%; height:100%; background: #464646;">아래로</div>
+                        <div class="box rightro end" style="width: 5%; height:100%; background: #464646; color: white;">버튼</div>
                     </div>
                 </div>
 
@@ -573,7 +597,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="box rightro" style="width: 5%; height:100%; background: #464646;">아래로</div>
+                        <div class="box rightro end" style="width: 5%; height:100%; background: #464646; color: white;">버튼</div>
                     </div>
                 </div>
 
@@ -613,7 +637,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="box rightro" style="width: 5%; height:100%; background: #464646;">아래로</div>
+                        <div class="box rightro end" style="width: 5%; height:100%; background: #464646; color: white;">버튼</div>
                     </div>
                 </div>
             </div>
