@@ -51,6 +51,9 @@ NOCACHE;
 INSERT INTO MEMBER
 VALUES (SEQ_UNO.NEXTVAL, '관리자', 'admin', 'admin@ps5.com', 'qwer', 'M', 22, default,sysdate,sysdate,'Y');
 
+INSERT INTO MEMBER
+VALUES (SEQ_UNO.NEXTVAL, '회원1', 'user01', 'user01@ps5.com', '1234', 'M', 25, default,sysdate,sysdate,'Y');
+
 --===============================================================================
 --회원 신체정보
 CREATE TABLE MEM_PHYSICAL_INFO (
