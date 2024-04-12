@@ -10,7 +10,7 @@ import com.pss.diet.model.vo.Diet;
 import com.pss.member.model.vo.Member;
 import com.pss.userpage.model.dao.SearchUserDao;
 
-public class SearchUserImpl implements SearchUserService {
+public class SearchUserServiceImpl implements SearchUserService {
 
 	@Override
 	public ArrayList searchUser(String nickname) {
