@@ -12,12 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 import com.css.exercise.model.vo.Exercise;
 import com.pss.diet.model.vo.Diet;
 import com.pss.member.model.vo.Member;
-import com.pss.userpage.service.SearchUserImpl;
+import com.pss.userpage.service.SearchUserServiceImpl;
 
 /**
  * Servlet implementation class SearchUserController
  */
-@WebServlet("/search.us")
+@WebServlet("/search.me")
 public class SearchUserController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -38,7 +38,7 @@ public class SearchUserController extends HttpServlet {
 		
 		ArrayList<Object> list = new ArrayList<>();
 		
-		list = new SearchUserImpl().searchUser(nickname);
+		list = new SearchUserServiceImpl().searchUser(nickname);
 		
 		if ((Member)list.get(0) == null) {
 			request.setAttribute("errorMsg", "존재하지 않는 유저입니다.");
